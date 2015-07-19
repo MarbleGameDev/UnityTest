@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
-	public float moveSpeed;
-	public float rotateSpeed;
+	public float moveSpeed = 10;
 	public Vector3 input;
 	public float rotation;
 	float velocity;
@@ -23,11 +22,13 @@ public class PlayerMovement : MonoBehaviour {
 		velocity = Input.GetAxis ("Vertical");
 		rotation = Input.GetAxis ("Horizontal");
 		if (velocity != 0) {
+			float rotateSpeed = 18 * moveSpeed;
 			var distance = velocity * moveSpeed * Time.deltaTime;
 			var turn = rotation * rotateSpeed * Time.deltaTime * velocity;
-			transform.Rotate (0, transform.rotation.eulerAngles.y + turn, 0);
+			transform.Rotate (0, turn, 0);
 			transform.Translate (Vector3.forward * distance);
 			print (rotation);
+
 		}
 
 	}
