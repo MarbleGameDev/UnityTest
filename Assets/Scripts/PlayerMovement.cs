@@ -6,28 +6,29 @@ public class PlayerMovement : MonoBehaviour {
 	public float rotateSpeed;
 	public Vector3 input;
 	public float rotation;
+	float velocity;
+	float temprotation;
+	float horizontalVelocity;
+	float verticalVelocity;
 
 	// Use this for initialization
 	void Start () {
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		private float temprotation;
-		rotation = transform.eulerAngles.y;//Rotation from left and right keys
-		transform.Rotate (0, Input.GetAxis ("Horizontal") * rotateSpeedn, 0);
-		input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-		if (rotation > 270) {
-			temprotation -= 270;
-		} else if (this.rotation > 180) {
-			temprotation -= 180;
-		} else if (this.rotation > 90) {
-			temprotation -= 90;
-		}else{
-			temprotation = rotation;
+
+
+		velocity = Input.GetAxis ("Vertical");
+		rotation = Input.GetAxis ("Horizontal");
+		if (velocity != 0) {
+			var distance = velocity * moveSpeed * Time.deltaTime;
+			var turn = rotation * rotateSpeed * Time.deltaTime * velocity;
+			transform.Rotate (0, transform.rotation.eulerAngles.y + turn, 0);
+			transform.Translate (Vector3.forward * distance);
+			print (rotation);
 		}
-		print (rotation);
-		//GetComponent<Rigidbody> ().AddForce (input * moveSpeed);
+
 	}
 }
