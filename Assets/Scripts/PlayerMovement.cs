@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float moveSpeed = 10;
 	public Vector3 input;
 	public float rotation;
-	float velocity;
+	public float velocity;
 	float temprotation;
 	float horizontalVelocity;
 	float verticalVelocity;
