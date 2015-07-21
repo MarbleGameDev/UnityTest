@@ -6,9 +6,6 @@ public class PlayerMovement : MonoBehaviour {
 	public Vector3 input;
 	public float rotation;
 	public float velocity;
-	float temprotation;
-	float horizontalVelocity;
-	float verticalVelocity;
 
 	// Use this for initialization
 	void Start () {
@@ -27,8 +24,17 @@ public class PlayerMovement : MonoBehaviour {
 			var turn = rotation * rotateSpeed * Time.deltaTime * velocity;
 			transform.Rotate (0, turn, 0);
 			transform.Translate (Vector3.forward * distance);
-			print (rotation);
+			print (Time.deltaTime);
 
+
+		}
+		if ( transform.eulerAngles.z > 35 & 95 > transform.eulerAngles.z  )
+		{
+			transform.Rotate (0,0,-2);
+		}
+		if ( transform.eulerAngles.z > 265 & 325 > transform.eulerAngles.z  )
+		{
+			transform.Rotate (0,0,2);
 		}
 
 	}
