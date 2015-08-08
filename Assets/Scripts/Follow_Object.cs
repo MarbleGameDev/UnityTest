@@ -19,6 +19,7 @@ public class Follow_Object : MonoBehaviour
 			transform.LookAt (target.transform);
 		}
 		transform.position = target.transform.position + positionOffset;
+		transform.rotation = target.transform.rotation;
 		
 	}
 	
