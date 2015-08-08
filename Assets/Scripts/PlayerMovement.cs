@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 	public Vector3 input;
 	public float rotation;
 	public float velocity;
+	public float turn;
 
 	void OnCollisionEnter(Collision col)
 	{
@@ -36,10 +37,9 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			float rotateSpeed = 18 * moveSpeed;
 			var distance = velocity * moveSpeed * Time.deltaTime;
-			var turn = rotation * rotateSpeed * Time.deltaTime * velocity;
+			this.turn = rotation * rotateSpeed * Time.deltaTime * velocity;
 			transform.Rotate (0, turn, 0);
 			transform.Translate (Vector3.forward * distance);
-			print (Time.deltaTime);
 					
 		}
 				

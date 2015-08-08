@@ -6,20 +6,23 @@ public class Follow_Object : MonoBehaviour
 	Vector3 positionOffset = Vector3.zero;
 
 
+
 	void Start () 
 	{
-		positionOffset = target.transform.position + transform.position; 
+		positionOffset = target.transform.position; 
 	}
 	
 	
 	void Update () 
 	{
+		GameObject player = GameObject.Find("SkyCar");
+		PlayerMovement playerMovement = player.GetComponent<PlayerMovement> ();
 		if (target != null) 
 		{
 			transform.LookAt (target.transform);
 		}
 		transform.position = target.transform.position + positionOffset;
-		transform.rotation = target.transform.rotation;
+		transform.Rotate (0, playerMovement.turn, 0);
 		
 	}
 	
