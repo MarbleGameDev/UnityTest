@@ -1,82 +1,47 @@
 fileFormatVersion: 2
-guid: fe798452583c41645a9a15c1aaac648c
-timeCreated: 1439085100
+guid: ef12a2cd2458f08498a0dc26536875de
+timeCreated: 1439140815
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
     100002: pCone1
-    100004: pCone10
-    100006: pCone11
-    100008: pCone12
-    100010: pCone13
-    100012: pCone2
-    100014: pCone3
-    100016: pCone4
-    100018: pCone5
-    100020: pCone6
-    100022: pCone7
-    100024: pCone8
-    100026: pCone9
-    100028: pCylinder1
+    100004: pCone2
+    100006: pCone4
+    100008: pCone5
+    100010: pCone6
+    100012: pCone7
+    100014: pCylinder1
     400000: //RootNode
     400002: pCone1
-    400004: pCone10
-    400006: pCone11
-    400008: pCone12
-    400010: pCone13
-    400012: pCone2
-    400014: pCone3
-    400016: pCone4
-    400018: pCone5
-    400020: pCone6
-    400022: pCone7
-    400024: pCone8
-    400026: pCone9
-    400028: pCylinder1
+    400004: pCone2
+    400006: pCone4
+    400008: pCone5
+    400010: pCone6
+    400012: pCone7
+    400014: pCylinder1
     2300000: pCone1
-    2300002: pCone10
-    2300004: pCone11
-    2300006: pCone12
-    2300008: pCone13
-    2300010: pCone2
-    2300012: pCone3
-    2300014: pCone4
-    2300016: pCone5
-    2300018: pCone6
-    2300020: pCone7
-    2300022: pCone8
-    2300024: pCone9
-    2300026: pCylinder1
+    2300002: pCone2
+    2300004: pCone4
+    2300006: pCone5
+    2300008: pCone6
+    2300010: pCone7
+    2300012: pCylinder1
     3300000: pCone1
-    3300002: pCone10
-    3300004: pCone11
-    3300006: pCone12
-    3300008: pCone13
-    3300010: pCone2
-    3300012: pCone3
-    3300014: pCone4
-    3300016: pCone5
-    3300018: pCone6
-    3300020: pCone7
-    3300022: pCone8
-    3300024: pCone9
-    3300026: pCylinder1
-    4300000: pCone1
-    4300002: pCylinder1
+    3300002: pCone2
+    3300004: pCone4
+    3300006: pCone5
+    3300008: pCone6
+    3300010: pCone7
+    3300012: pCylinder1
+    4300000: pCylinder1
+    4300002: pCone1
     4300004: pCone2
-    4300006: pCone3
-    4300008: pCone4
-    4300010: pCone5
-    4300012: pCone6
-    4300014: pCone7
-    4300016: pCone8
-    4300018: pCone9
-    4300020: pCone10
-    4300022: pCone11
-    4300024: pCone12
-    4300026: pCone13
+    4300006: pCone4
+    4300008: pCone5
+    4300010: pCone6
+    4300012: pCone7
     9500000: //RootNode
   materials:
     importMaterials: 1
