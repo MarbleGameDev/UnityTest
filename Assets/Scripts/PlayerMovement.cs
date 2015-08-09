@@ -33,13 +33,17 @@ public class PlayerMovement : MonoBehaviour {
 			float rotateSpeed = 18 * moveSpeed;
 			var distance = velocity * moveSpeed * Time.deltaTime;
 			this.turn = rotation * rotateSpeed * Time.deltaTime * velocity;
-			transform.Rotate (0, turn, 0);
 			if (velocity < 0){
 				velocityMod = (Mathf.Sqrt(Mathf.Abs(velocity)) * .8f);
 			}else if (velocity > 0){
 				velocityMod = (Mathf.Sqrt(velocity) * 1.1f);
 			}
-			transform.Translate (Vector3.forward * distance * velocityMod);
+			if (shouldMove){
+				transform.Rotate (0, turn, 0);
+				transform.Translate (Vector3.forward * distance * velocityMod);
+			}else{
+				transform.Translate (Vector3.forward * distance * (velocityMod * .8f));
+			}
 		
 			//moveSpeed = 
 		}
@@ -50,7 +54,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 		
 			
-		if ( transform.eulerAngles.z > 35 & 95 > transform.eulerAngles.z  )
+		if ( transform.eulerAngles.z > 35 & 255 > transform.eulerAngles.z  )
 		{
 			transform.Rotate (0,0,-2);
 		}

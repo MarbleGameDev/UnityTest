@@ -17,10 +17,11 @@ public class WheelCollider : MonoBehaviour {
 	{
 		GameObject player = GameObject.Find("SkyCar");
 		PlayerMovement playerMovement = player.GetComponent<PlayerMovement> ();
-		if (col.gameObject.name != "floopy") {
-			playerMovement.shouldMove = true;
-		} else {
-			playerMovement.shouldMove = false;
-		}
+		playerMovement.shouldMove = true;
+	}
+	void OnCollisionExit(Collision col){
+		GameObject player = GameObject.Find("SkyCar");
+		PlayerMovement playerMovement = player.GetComponent<PlayerMovement> ();
+		playerMovement.shouldMove = false;
 	}
 }
