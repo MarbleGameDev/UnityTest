@@ -22,7 +22,9 @@ public class Follow_Object : MonoBehaviour
 			transform.LookAt (target.transform);
 		}
 		transform.position = target.transform.position + positionOffset;
-		transform.Rotate (0, playerMovement.turn, 0);
+		if (playerMovement.turn != 0) {
+			transform.Rotate (0, playerMovement.turn, 0);
+		}
 		
 	}
 	

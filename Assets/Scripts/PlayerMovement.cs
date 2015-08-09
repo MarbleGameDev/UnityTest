@@ -7,16 +7,10 @@ public class PlayerMovement : MonoBehaviour {
 	public float rotation;
 	public float velocity;
 	public float turn;
+	public bool shouldMove;
+	public float velocityMod;
 
-	/*void OnCollisionEnter(Collision col)
-	{
-		if (col.gameObject.name != "floopy") 
-		{
-			
-			velocity = Input.GetAxis ("Vertical");
-			rotation = Input.GetAxis ("Horizontal");
-		}
-	}*/
+
 
 	// Use this for initialization
 	void Start () 
@@ -40,7 +34,12 @@ public class PlayerMovement : MonoBehaviour {
 			var distance = velocity * moveSpeed * Time.deltaTime;
 			this.turn = rotation * rotateSpeed * Time.deltaTime * velocity;
 			transform.Rotate (0, turn, 0);
-			transform.Translate (Vector3.forward * distance);
+			if (velocity < 0){
+				velocityMod = (Mathf.Sqrt(Mathf.Abs(velocity)) * .8f);
+			}else if (velocity > 0){
+				velocityMod = (Mathf.Sqrt(velocity) * 1.1f);
+			}
+			transform.Translate (Vector3.forward * distance * velocityMod);
 		
 			//moveSpeed = 
 		}
