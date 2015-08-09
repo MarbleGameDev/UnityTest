@@ -2,13 +2,13 @@
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
-	public float moveSpeed = 10;
+	public float moveSpeed = 10.0f;
 	public Vector3 input;
 	public float rotation;
 	public float velocity;
 	public float turn;
 
-	void OnCollisionEnter(Collision col)
+	/*void OnCollisionEnter(Collision col)
 	{
 		if (col.gameObject.name != "floopy") 
 		{
@@ -16,12 +16,12 @@ public class PlayerMovement : MonoBehaviour {
 			velocity = Input.GetAxis ("Vertical");
 			rotation = Input.GetAxis ("Horizontal");
 		}
-	}
+	}*/
 
 	// Use this for initialization
 	void Start () 
 	{
-	
+
 
 	}
 
@@ -29,7 +29,8 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () 
 	{
 	
-				
+
+
 		velocity = Input.GetAxis ("Vertical");
 		rotation = Input.GetAxis ("Horizontal");
 			
@@ -40,10 +41,15 @@ public class PlayerMovement : MonoBehaviour {
 			this.turn = rotation * rotateSpeed * Time.deltaTime * velocity;
 			transform.Rotate (0, turn, 0);
 			transform.Translate (Vector3.forward * distance);
-					
+		
+			//moveSpeed = 
 		}
-				
-	
+
+			if (velocity == 0)
+		{
+			//moveSpeed = 
+		}
+		
 			
 		if ( transform.eulerAngles.z > 35 & 95 > transform.eulerAngles.z  )
 		{
